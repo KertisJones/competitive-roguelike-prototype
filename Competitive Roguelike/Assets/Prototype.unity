@@ -597,8 +597,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 1426491133439956, guid: 4943a914071cd4e499af284c0a8d9aaf, type: 2}
   enemy: {fileID: 1426491133439956, guid: b5267e9ef3e89be4584878a93957754a, type: 2}
-  minDistanceFromPlayer: 5
-  rechargeTime: 1
+  minDistPlayer: 5
+  minDistFinish: 3
+  rechargeTime: 1.5
 --- !u!1 &1103400667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1087,7 @@ GameObject:
   - component: {fileID: 1835155868}
   m_Layer: 0
   m_Name: Pressure Plate
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
