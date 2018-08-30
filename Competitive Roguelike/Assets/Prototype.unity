@@ -597,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 1426491133439956, guid: 4943a914071cd4e499af284c0a8d9aaf, type: 2}
   enemy: {fileID: 1426491133439956, guid: b5267e9ef3e89be4584878a93957754a, type: 2}
+  minDistanceFromPlayer: 2
 --- !u!1 &1103400667
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class spawnEnemy : MonoBehaviour {
     public GameObject wall;
     public GameObject enemy;
 
+    public float minDistanceFromPlayer = 1f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,13 +19,19 @@ public class spawnEnemy : MonoBehaviour {
         {
             //Debug.Log("Trying to spawn...");
             Vector3 spawnPoint = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
-            Instantiate(enemy, spawnPoint, transform.rotation);
+            if (Vector3.Distance(spawnPoint, GameObject.FindGameObjectWithTag("Player").transform.position) >= minDistanceFromPlayer)
+            {
+                Instantiate(enemy, spawnPoint, transform.rotation);
+            }
         }
         if (Input.GetButtonDown("Fire2"))
         {
             //Debug.Log("Trying to spawn...");
             Vector3 spawnPoint = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
-            Instantiate(wall, spawnPoint, transform.rotation);
+            if (Vector3.Distance(spawnPoint, GameObject.FindGameObjectWithTag("Player").transform.position) >= minDistanceFromPlayer)
+            {
+                Instantiate(wall, spawnPoint, transform.rotation);
+            }
         }
     }
 }
